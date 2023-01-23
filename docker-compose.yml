@@ -1,0 +1,44 @@
+version: "3.8"
+services:
+   frontend:
+      build: ./client
+      container_name: shop_frontend
+      ports:
+         - "3000:80"
+      networks:
+         - my_network
+      volumes:
+         - ./client:/app
+      depends_on:
+         - backend
+
+   backend:
+      build: ./backend
+      container_name: shop_backend
+      ports:
+         - "3001:3001"
+      stdin_open: true
+      environment: 
+         - DB_URL=mongodb://database/yolomy
+      networks:
+         - my_network
+      volumes:
+         - ./client:/app
+      depends_on:
+         - mongo
+   mongo:
+      container_name: mongo
+      image: 'bitnami/mongodb-sharded:latest'
+      ports:
+         - 27017:27017
+      volumes:
+         - yolo:/data/db
+      networks:
+         - my_network
+
+volumes:
+   yolo:
+
+networks:
+   my_network:
+      driver: bridge
