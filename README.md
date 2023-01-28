@@ -1,3 +1,12 @@
+# Brief
+
+The project enumerates the steps to undertake to deploy an ecommerce application on Google Cloud Platform using Kubernetes service.
+The code is persisted on MongoDB.
+The ecommerce application has front end and backend codes implying there are two pods deployed on kubernetes i.e frontend and backend.
+
+The choice of GCP selected is asia east 2 which did not have cluster disk persistency limits when using the free tier.
+
+
 # Requirements
 Make sure that you have the following installed:
 - [node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) 
