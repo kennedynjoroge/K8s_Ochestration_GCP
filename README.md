@@ -38,5 +38,12 @@ Make sure that you have the following installed:
 # Deployment on GCP
 - Create a GCP account if it doesn't exist.
 - Log into the cloud project and enable billing
-- Enab
+- Create a kubernetes cluster by setting region and creating the container cluster.
+gcloud config set compute/zone asia-east2-a (created in Asia as it doesn’t	have the 600GB persistent SSD disk limit
+
+gcloud container clusters create yolo-cluster \
+  --machine-type e2-small \
+  --num-nodes 3 \
+  --scopes "https://www.googleapis.com/auth/projecthosting,storage-rw"
  
+ - Deploy the app using the kubectl commands specify the image name as pushed on Docker Hub
