@@ -26,15 +26,17 @@ Make sure that you have the following installed:
  ## Test the portal by navigating to home page and adding a product
  
  # Running on Docker
-### Navigate to your github account and fork https://github.com/kennedynjoroge/K8s_Ochestration_GCP/
-### Clone the code to pull the repository to your local directory
-### Navigate to the application directory K8s_Ochestration_GCP
-### Under backend directory, specify the MongoDB database configurations on the server.js file.
-### Run docker compose to install the image and create a container : sudo docker compose up --build
-### Note: The backend port as is 3001 and frontend port is 3000. You can change these if there are any conflicts.
-### Push images to docker hub : sudo docker compose push
-### Test the portal by navigating to home page and adding a product
+- Navigate to your github account and fork https://github.com/kennedynjoroge/K8s_Ochestration_GCP/
+- Clone the code to pull the repository to your local directory
+- Navigate to the application directory K8s_Ochestration_GCP
+- Under backend directory, specify the MongoDB database configurations on the server.js file.
+- Run docker compose to install the image and create a container : sudo docker compose up --build
+- Note: The backend port as is 3001 and frontend port is 3000. You can change these if there are any conflicts.
+- Push images to docker hub : sudo docker compose push
+- Test the portal by navigating to home page and adding a product
  
 # Deployment on GCP
- Create a GCP account if it doesn't exist. 
+- Create a GCP account if it doesn't exist.
+- Log into the cloud project and enable billing
+- Enab
  
